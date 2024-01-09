@@ -1,0 +1,120 @@
+.register {
+
+    .register__left {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .register__content {
+            text-align: center;
+
+            .register__form {
+
+                .register__title {
+                    font-size: $num-32;
+                    margin-bottom: $num-10;
+                }
+
+                .register__text {
+                    font-size: $num-16;
+                    margin-bottom: $num-48;
+                }
+
+                .login-form {
+
+                    .form__gg {
+                        @include textStyle(Figtree-light, $num-16, $dark-1);
+                        padding: $num-8 $num-16;
+                        height: $num-40;                      
+
+                        &:hover {
+                            border-color: $white-2;
+                            background-color: $white-1;
+                        }
+                    }
+
+                    .form__line {
+                        @include textStyle(Figtree-light, $num-16, $dark-0);
+                        margin: $num-16 0;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 45%;
+                            height: 1px;
+                            top: 50%;
+                            left: 0;
+                            background-color: $white-3;
+                        }
+                        
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 45%;
+                            height: 1px;
+                            top: 50%;
+                            right: 0;
+                            background-color: $white-3;
+                        }
+                    }
+
+                    .form__input {
+                        padding: $num-8 $num-16;
+                        height: $num-40;
+
+                        &::placeholder {
+                            @include textStyle(Figtree-light, $num-16, $dark-0);
+                            opacity: 0.7;
+                        }
+
+                        &:hover {
+                            border-color: $dark-1;
+                        }
+                    }
+
+                    .form__continue {
+                        width: 100%;
+                        height: $num-40;
+                        background-color: $blue-2;
+                        @include textStyle(Figtree-light, $num-16, $white-0);
+
+                        &:hover {
+                            background-color: $blue-3;
+                        }
+                    }
+
+                    .form__terms {
+                        .terms__text {
+                            @include textStyle(Figtree, $num-16, $dark-0);
+
+                            .terms__link {
+                                color: $blue-4;
+                                
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .register__footer {
+            position: absolute;
+            bottom: $num-50;
+            @include textStyle(Figtree-light, $num-16, $dark-0);
+
+            .text__link {
+                color: $blue-4;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}

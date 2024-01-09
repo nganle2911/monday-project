@@ -5,6 +5,11 @@
 
 /* ---------------------- SASS ----------------------- */
 // helpers
+@import "./helpers/variables";
+@import "./helpers/mixin";
 // base
+@import "./base/reset";
+@import "./base/typography";
 // components
 // pages
+@import "./pages/register";
