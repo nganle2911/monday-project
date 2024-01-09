@@ -1,5 +1,6 @@
 import { Button, Form, Input } from 'antd'
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 export default function RegisterForm() {
     const onFinish = (values) => {
@@ -31,9 +32,11 @@ export default function RegisterForm() {
                     <Input className='form__input' type='email' placeholder='name@company.com' />
                 </Form.Item>
                 <Form.Item>
-                    <Button type='primary' className="login-form-button form__continue">
-                        Continue
-                    </Button>
+                    <NavLink to={"/create-account"}>
+                        <Button type='primary' className="login-form-button form__continue">
+                            Continue
+                        </Button>
+                    </NavLink>
                 </Form.Item>
                 <Form.Item className='mt-4 mb-0 form__terms'>
                     <div className='terms__text'>By proceeding, you agree to the</div>
