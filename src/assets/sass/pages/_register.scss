@@ -108,7 +108,7 @@
         .register__footer {
             position: absolute;
             bottom: $num-50;
-            @include textStyle(Figtree-light, $num-16, $dark-0);
+            @include textStyle(Figtree, $num-16, $dark-0);
 
             .text__link {
                 color: $blue-4;
