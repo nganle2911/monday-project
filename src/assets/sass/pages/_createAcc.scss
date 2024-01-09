@@ -1,0 +1,39 @@
+.createAcc {
+
+    .createAcc__left {
+        .createAcc__content {
+
+            .createAcc__form {
+
+                .title {
+                    margin-bottom: $num-24;
+                }
+
+                .input_groups {
+                    .input_item {
+                        margin-bottom: $num-16;
+                        @include textStyle(Figtree, $num-14, $dark-1);
+                        
+                        .inputItem {
+                            padding: $num-8 $num-16;
+                            height: $num-48;
+
+                            &::placeholder {
+                                @include textStyle(Figtree-light, $num-16, $dark-1);
+                                opacity: 0.7;
+                            }
+
+                            &:hover {
+                                border-color: $dark-0;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            margin-bottom: $num-32;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

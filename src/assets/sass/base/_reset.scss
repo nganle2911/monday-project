@@ -10,6 +10,14 @@
     display: grid;
     grid-template-columns: auto 40%;
 
+    @include tablet {
+        grid-template-columns: auto 30%;
+    }
+
+    @include mobile {
+        grid-template-columns: auto 15%;
+    }
+
     .partLeft {
         @include x-mobile {
             grid-column: 1 / span 12;
@@ -29,6 +37,10 @@
     justify-content: space-between;
     height: 100%;
     padding: $num-64 $num-128;
+
+    .contentMiddle {
+        flex: 8 1 0%;
+    }
 }
 
 .logo {
@@ -52,6 +64,7 @@
         align-items: center;
         padding: $num-8 $num-16;
         height: $num-40;
+        border-radius: $num-4;
 
         a {
             font-family: Figtree-light;
