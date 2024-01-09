@@ -26,7 +26,8 @@
                     .form__gg {
                         @include textStyle(Figtree-light, $num-16, $dark-1);
                         padding: $num-8 $num-16;
-                        height: $num-40;                      
+                        height: $num-40;    
+                        border-radius: $num-4;                  
 
                         &:hover {
                             border-color: $white-2;
@@ -63,6 +64,7 @@
                     .form__input {
                         padding: $num-8 $num-16;
                         height: $num-40;
+                        border-radius: $num-4;
 
                         &::placeholder {
                             @include textStyle(Figtree-light, $num-16, $dark-0);
@@ -78,6 +80,7 @@
                         width: 100%;
                         height: $num-40;
                         background-color: $blue-2;
+                        border-radius: $num-4;
                         @include textStyle(Figtree-light, $num-16, $white-0);
 
                         &:hover {
