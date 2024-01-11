@@ -1,0 +1,32 @@
+.flowQues2 {
+    .flowQues2__left {
+        .flowQues2__content {
+            .flowQues2__checkBoxGroups {
+                .flowQues2__optionGroup {
+                    .btnCheckBox {
+                        border: 1px solid $dark-2;
+                        border-radius: $num-32;
+                        padding: $num-8 $num-16;
+
+                        span {
+                            &:nth-child(1) {
+                                .ant-checkbox-inner {
+                                    border-radius: 0;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                @include textStyle(Figtree-light, $num-16, $dark-3);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .flowQues2__footer {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

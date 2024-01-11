@@ -81,7 +81,7 @@ export default function Question1() {
                         </Button>
                     </div>) : (<div className='flowQues1__footer formFooter'>
                         <Button className='btnFooter btnContinue btnValid'>
-                            <NavLink to={""}>Continue</NavLink>
+                            <NavLink to={"/flow-question-2"}>Continue</NavLink>
                             <FontAwesomeIcon
                                 icon={faChevronRight}
                                 style={{ fontSize: "12px" }} />
