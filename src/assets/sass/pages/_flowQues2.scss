@@ -7,6 +7,7 @@
                         border: 1px solid $dark-2;
                         border-radius: $num-32;
                         padding: $num-8 $num-16;
+                        transition: all .1s;
 
                         span {
                             &:nth-child(1) {
@@ -18,6 +19,10 @@
                             &:nth-child(2) {
                                 @include textStyle(Figtree-light, $num-16, $dark-3);
                             }
+                        }
+
+                        &:active {
+                            transform: scale(0.95) translate3d(0,0,0);
                         }
                     }
                 }
