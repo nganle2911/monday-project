@@ -1,0 +1,46 @@
+.flowQues1 {
+    .flowQues1__left {
+        .flowQues1__content {
+            .flowQues1__radioGroups {
+                .btnRadio {
+                    border: 1px solid $dark-2;
+                    border-radius: $num-32;
+                    padding: $num-8 $num-16;
+
+                    span {
+                        &:nth-child(2) {
+                            @include textStyle(Figtree-light, $num-14, $dark-3);
+                        }
+                    }
+                }
+            }
+
+            .flowQues1__footer {
+                .btnContinue {
+                    background: $white-4;
+                    color: $dark-4;
+                    border: none;
+
+                    &:hover {
+                        a {
+                            color: $dark-4;
+                        }
+                    }
+                }
+
+                .btnValid {
+                    background: $blue-2;
+                    color: $white-0;
+                    border: none;
+
+                    &:hover {
+                        background: $blue-3;
+                        a {
+                            color: $white-0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
