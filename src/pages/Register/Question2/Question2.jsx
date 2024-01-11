@@ -2,6 +2,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Checkbox } from 'antd'
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 const plainOptions = ["TV / Streaming service", "Billboard / Public transit ad", "Audio ad (Podcast, Spotify)", "YouTube ad", "LinkedIn", "Search engine (Google, Bing, etc.)", "Software review sites", "Consultant", "Friend / Colleague", "Social media (Facebook, Instagram, Reddit, etc.)", "Other"];
 
@@ -43,7 +44,7 @@ export default function Question2() {
                             <a>Back</a>
                         </Button>
                         <Button className='btnFooter btnContinue'>
-                            <a>Continue</a>
+                            <NavLink to={"/invite-member"}>Continue</NavLink>
                             <FontAwesomeIcon icon={faChevronRight} style={{fontSize: "12px"}} />
                         </Button>
                     </div>

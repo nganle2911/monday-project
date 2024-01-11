@@ -1,0 +1,71 @@
+.inviteMember {
+    .inviteMember__addTeam {
+        .addTeam__content {
+            .addTeam__text {
+                @include textStyle(Figtree, $num-14, $dark-1);
+            }
+
+            .addTeam__inputGroups {
+                .addTeam__item {
+                    .inputItem {
+                        border-color: $dark-2;
+
+                        &::placeholder {
+                            @include textStyle(Figtree, $num-14, $dark-3);
+                        }
+
+                        &:hover {
+                            border-color: $dark-2;
+                        }
+                    }
+
+                    .btnCopy {
+                        border-left: none;
+                        width: $num-120;
+                        @include textStyle(Figtree-light, $num-14, $dark-1);
+                        border-color: $dark-2;
+
+                        .svg-inline--fa {
+                            margin-right: $num-10;
+                        }
+
+                        &:hover {
+                            background: $white-1;
+                            border-color: $dark-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .inviteMember__footer {
+        display: flex;
+        justify-content: space-between;
+
+        .btnRemind {
+            border: none;
+            color: $dark-1;
+
+            &:hover {
+                background: $white-1;
+
+                a {
+                    color: $dark-1;
+                }
+            }
+        }
+
+        .btnInvite {
+            border: none;
+            background: $white-4;
+            color: $dark-4;
+
+            &:hover {
+                a {
+                    color: $dark-4;
+                }
+            }
+        }
+    }
+}

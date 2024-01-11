@@ -3,6 +3,7 @@ import RegisterPage from './pages/Register/SignUpNew/RegisterPage';
 import CreateAccount from './pages/Register/CreateAccount/CreateAccount';
 import Question1 from './pages/Register/Question1/Question1';
 import Question2 from './pages/Register/Question2/Question2';
+import InviteMember from './pages/Register/InviteMember/InviteMember';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/create-account' element={<CreateAccount />}></Route>
           <Route path='/flow-question-1' element={<Question1 />}></Route>
           <Route path='/flow-question-2' element={<Question2 />}></Route>
+          <Route path='/invite-member' element={<InviteMember />}></Route>
         </Routes>
       </BrowserRouter>
     </>
