@@ -1,7 +1,19 @@
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
+import { faChevronDown, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button, Input } from 'antd'
+import { Button, Dropdown, Input } from 'antd'
 import React from 'react'
+
+const items = [
+    {
+        label: <a className="itemAdmin">Admin<span>Can invite and manage new users</span></a>,
+        key: "1"
+    },
+    {
+        label: <a lassName="itemUser">Member<span>Can add and edit content</span></a>,
+        key: "2"
+    }
+];
 
 export default function InviteMember() {
     return (
@@ -23,6 +35,25 @@ export default function InviteMember() {
                                         Copy
                                     </Button>
                                 </div>
+                                <div className='addTeam__item mb-3 flex'>
+                                    <Input className='inputItem h-9 w-9/12 rounded rounded-r-none' placeholder='Add email here' />
+                                    <div className='btnItem'>
+                                        <Dropdown.Button
+                                            className='btnItem__dropdown'
+                                            icon={<FontAwesomeIcon icon={faChevronDown} width={"11px"} />}
+                                            menu={{ items }}
+                                            trigger={['click']}
+                                        >
+                                            Admin
+                                        </Dropdown.Button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="addTeam__btnAdd">
+                                <Button className='item__btnAdd'>
+                                    <FontAwesomeIcon icon={faPlus} />
+                                    Add another
+                                </Button>
                             </div>
                         </div>
                     </div>
