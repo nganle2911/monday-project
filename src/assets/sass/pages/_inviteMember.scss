@@ -87,6 +87,10 @@
                         }
                     }
                 }
+
+                @include mobile {
+                    width: 100%;
+                }
             }
 
             .addTeam__btnAdd {
