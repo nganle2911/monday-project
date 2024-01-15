@@ -2,7 +2,7 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import { faChevronDown, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Dropdown, Input } from 'antd'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 const items = [
     {
@@ -23,6 +23,7 @@ const items = [
 
 export default function InviteMember() {
     const [selectedItem, setSelectedItem] = useState("Admin");
+    const inputEl = useRef(null);
 
     // todo: handle item selection in dropdown menu
     const handleSelectedItem = (item) => {
@@ -33,6 +34,11 @@ export default function InviteMember() {
             setSelectedItem("Admin")
         }
     };
+
+    // todo: handle "add another" button
+    const handleAdd = () => {
+        
+    }
 
     return (
         <div className='inviteMember customCom'>
@@ -45,7 +51,7 @@ export default function InviteMember() {
                         <h1 className='title mb-8'>Who else is on your team?</h1>
                         <div className='addTeam__content'>
                             <p className='addTeam__text mb-2'>Invite with link (anyone with a @ email)</p>
-                            <div className='addTeam__inputGroups'>
+                            <div className='addTeam__inputGroups' ref={inputEl}>
                                 <div className='addTeam__item mb-3 flex'>
                                     <Input className='inputItem h-10 w-9/12 rounded rounded-r-none' placeholder='https://india-richard.monday.com/users/sign_up?invitationId=35034775384424395000' />
                                     <Button className='btnCopy rounded rounded-l-none h-10'>
@@ -73,7 +79,7 @@ export default function InviteMember() {
                                 </div>
                             </div>
                             <div className="addTeam__btnAdd">
-                                <Button className='item__btnAdd'>
+                                <Button className='item__btnAdd' onClick={handleAdd}>
                                     <FontAwesomeIcon icon={faPlus} />
                                     Add another
                                 </Button>
