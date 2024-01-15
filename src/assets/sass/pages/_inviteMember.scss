@@ -6,6 +6,8 @@
             }
 
             .addTeam__inputGroups {
+                width: 85%;
+
                 .addTeam__item {
                     &:nth-child(1) {
                         .inputItem {
@@ -93,6 +95,7 @@
                     @include textStyle(Figtree, $num-14, $dark-1);
                     padding: $num-8 $num-16;
                     border: none;
+                    box-shadow: none;
 
                     .fa-plus {
                         font-size: $num-12;
@@ -133,6 +136,32 @@
             &:hover {
                 a {
                     color: $dark-4;
+                }
+            }
+        }
+    }
+}
+
+.ant-dropdown {
+    .ant-dropdown-menu {
+        padding: $pd-2;
+
+        .ant-dropdown-menu-item {
+            &:hover {
+                background: $white-1;
+            }
+
+            .ant-dropdown-menu-title-content {
+                .dropdownContent__child {
+                    display: flex;
+                    flex-direction: column;
+                    @include textStyle(Figtree, $num-14, $dark-1);
+
+                    span {
+                        &:nth-child(2) {
+                            color: $dark-3;
+                        }
+                    }
                 }
             }
         }

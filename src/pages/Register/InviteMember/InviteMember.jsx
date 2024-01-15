@@ -2,20 +2,38 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import { faChevronDown, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Dropdown, Input } from 'antd'
-import React from 'react'
+import React, { useState } from 'react'
 
 const items = [
     {
-        label: <a className="itemAdmin">Admin<span>Can invite and manage new users</span></a>,
+        label: <div className='dropdownContent__child itemAdmin'>
+            <span>Admin</span>
+            <span>Can invite and manage new users</span>
+        </div>,
         key: "1"
     },
     {
-        label: <a lassName="itemUser">Member<span>Can add and edit content</span></a>,
+        label: <div className='dropdownContent__child itemMember'>
+            <span>Member</span>
+            <span>Can add and edit content</span>
+        </div>,
         key: "2"
     }
 ];
 
 export default function InviteMember() {
+    const [selectedItem, setSelectedItem] = useState("Admin");
+
+    // todo: handle item selection in dropdown menu
+    const handleSelectedItem = (item) => {
+        console.log('item', item);
+        if (item.key === "2") {
+            setSelectedItem("Member");
+        } else {
+            setSelectedItem("Admin")
+        }
+    };
+
     return (
         <div className='inviteMember customCom'>
             <div className='inviteMember__left partLeft'>
@@ -41,10 +59,15 @@ export default function InviteMember() {
                                         <Dropdown.Button
                                             className='btnItem__dropdown'
                                             icon={<FontAwesomeIcon icon={faChevronDown} width={"11px"} />}
-                                            menu={{ items }}
+                                            menu={{
+                                                items: items.map((item) => ({
+                                                    ...item,
+                                                    onClick: () => handleSelectedItem(item),
+                                                }))
+                                            }}
                                             trigger={['click']}
                                         >
-                                            Admin
+                                            {selectedItem}
                                         </Dropdown.Button>
                                     </div>
                                 </div>
